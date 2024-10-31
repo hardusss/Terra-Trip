@@ -1,0 +1,87 @@
+
+  #city {
+    display: none;
+  }
+  #man {
+    display: none;
+  }
+  #road {
+    display: none;
+  }
+  
+  @keyframes fromLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+  }
+  
+  @keyframes fromDown{
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+  }
+
+
+  .form_user {
+    position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh;
+      width: 100vw;
+  }
+  @media (min-width: 1250px){
+    #city {
+      position: absolute;
+      top:30px;
+      left: 70px;
+      width: 360px;
+      border-radius: 20px;
+      display: block;
+      z-index: 9999;
+      animation: fromLeft .6s;
+    }
+    #man {
+      border-radius: 20px;
+      display: block;
+      animation: fromDown .6s;
+      position: absolute;
+      left: 270px;
+      top: 160px;
+      width: 600px;
+    }
+    #page_login {
+      margin-left: 140px;
+    }
+    #road {
+      position: absolute;
+      bottom:20px;
+      left: 70px;
+      width: 360px;
+      border-radius: 20px;
+      display: block;
+      z-index: -9999;
+      animation: fromLeft .6s;
+    }
+    .form_user{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh;
+      width: 30vw;
+  }
+  }
+
